@@ -1,10 +1,8 @@
 package com.istea.gardenapp.presentacion.signos
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -29,7 +27,6 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.compose.LifecycleEventEffect
-import com.istea.gardenapp.R
 import com.istea.gardenapp.repository.Planta
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -113,13 +110,13 @@ fun ListaDeSignosView(searchText:String, plantas: List<Planta>, onSearch: (Strin
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Image(
-                        painterResource(R.drawable.i008),
+                        painter = painterResource(id = planta.ilustrationId),
                         contentDescription = planta.nombre,
                         contentScale = ContentScale.Fit,
                         modifier = Modifier
                             .height(120.dp)
                             .width(120.dp)
-                            .padding(10.dp),
+                            .padding(10.dp)
                     )
                     Column {
                         Text(

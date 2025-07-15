@@ -11,6 +11,7 @@ class Repository {
             lirio,
             verdolaga,
             colaDeRaton,
+            colaDeRaton,
             potos,
             helecho,
             rosaMistica,

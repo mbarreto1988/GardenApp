@@ -27,7 +27,6 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.Lifecycle
@@ -53,7 +52,7 @@ fun DetalleView (
             TopAppBar(
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.tertiaryContainer,
-                    titleContentColor = MaterialTheme.colorScheme.tertiary
+                    titleContentColor = MaterialTheme.colorScheme.primaryContainer
                 ),
                 title = { Text(text = "Cuidados") },
                 navigationIcon = {
@@ -175,7 +174,7 @@ fun PrediccionView(titulo:String, descripcion: String){
                 modifier = Modifier
                     .fillMaxWidth(),
                 style = MaterialTheme.typography.bodyMedium,
-                text = "aca deberia haber un texto no harcodeado"
+                text = descripcion
             )
         }
     }
